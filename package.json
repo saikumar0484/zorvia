@@ -1,0 +1,33 @@
+{
+  "name": "zorvia",
+  "version": "1.0.0",
+  "description": "A modern, open-source business intelligence and data visualization platform inspired by PowerBI.",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "npm run dev --workspace=@zorvia/api",
+    "dev:web": "npm run dev --workspace=@zorvia/web",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "keywords": [
+    "bi",
+    "analytics",
+    "dashboard",
+    "visualization",
+    "powerbi"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^10.5.0",
+    "prettier": "^3.8.4",
+    "typescript": "^6.0.3"
+  }
+}
